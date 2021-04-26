@@ -1,7 +1,7 @@
 # unesi ime i prezime sa konzole i ispiši ih, max_l = 20
 
 .section .data
-	max_l = 20
+	max_l = 20+1
 	t1: .ascii "Unesite Vaše ime: \0"
 	t1_l = . - t1
 	t2: .ascii "Unesite Vaše prezime: \0"
