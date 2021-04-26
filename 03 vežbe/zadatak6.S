@@ -8,7 +8,7 @@
 main:
 	movl $s, %eax		# premesti pokazivač na string u registar a
 kraj_s:
-	cmpb $0, (%eax)		# poredi \0 (u ascii vrednost 0) sa brojem 0
+	cmpb $0, (%eax)		# poredi \0 (u ascii 0) sa brojem 0
 	je razmaci1		# ako je jednako, idi na sledeći deo zadatka
 	incl %eax		# increment a (pokazivač na string ++)
 	jmp kraj_s		# ponovi ovu petlju dok ne dođeš do \0 (elem iza poslednjeg)
