@@ -34,7 +34,7 @@ do_Z:
 	jbe oduzmi
 	ja od_a
 od_a:
-	cmpb $'a' , %dl
+	cmpb $'a' , %dl			# mala slova su iza velikih
 	jae do_m
 	jb sledeci
 do_m:
