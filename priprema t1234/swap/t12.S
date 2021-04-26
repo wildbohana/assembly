@@ -55,16 +55,16 @@ provera:
 	cmpl %esi, %edi
 	je ispis
 menjaj:
-	movl %esi, %eax		  # čuva adresu trenutnog karaktera
+	movl %esi, %eax		  	# čuva adresu trenutnog karaktera
 	movb (%esi), %cl		# čuva vrednost prvog karaktera
-	incl %esi			      # pređi na sledeći element
+	incl %esi			# pređi na sledeći element
 	movl %esi, %ebx			# sačuvaj adresu trenutnog karaktera
 	movb (%ebx), %dl		# sačuvaj vrednost trenurnog karaktera
 	
 	xchgb %dl, (%eax)		# prepiši vrednost drugog na vrednost prvog
 	xchgb %cl, (%ebx)		# prepiši vrednost prvog na vrednost drugog
 	
-	incl %esi			      # pređi na sledeći element (incl + incl)
+	incl %esi			# pređi na sledeći element (incl + incl)
 	jmp provera
 
 ispis:
