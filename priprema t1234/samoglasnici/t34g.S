@@ -24,13 +24,13 @@ main:
 	movl $maxl, %edx
 	int $0x80
 	movl %eax, unosl
-##########################
+
 poziv:
 	pushl $unos
 	call samoglasnici
 	addl $4, %esp
 	movl %eax, broj
-##########################
+
 kraj:
 	movl $1, %eax
 	movl broj, %ebx
