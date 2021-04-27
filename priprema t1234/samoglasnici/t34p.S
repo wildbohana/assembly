@@ -1,14 +1,17 @@
+# poslat samo unos, vraćaš broj samoglasnika preko %eax
+
 .section .data
 .section .text
 .global samoglasnici
 
 samoglasnici:
 	pushl %ebp
-	movl %ebp, %esp
+	movl %esp, %ebp
 
 	pushl %esi
 	pushl %edi
 	pushl %ebx
+	
 pokazivaci:
 	movl 8(%ebp) %esi
 	movl $0, %ebx			        # da se ne bi obavljala bezveze iteracija za \0
