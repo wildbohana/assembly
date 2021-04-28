@@ -22,11 +22,11 @@ main:
 	movl $unos, %ecx
 	movl $maxl, %edx
 	int $0x80
-	movl %eax, unosl		  # smeštaš dužinu
+	movl %eax, unosl		# smeštaš dužinu
 	
 	movl $unos, %esi
 	movl %esi, %edi
-	decl %eax		          # poslednji karakter je \0 koji nam ne treba za ovo
+	decl %eax			# poslednji karakter je \0 koji nam ne treba za ovo
 	addl %eax, %edi
 	
 parnost:
@@ -49,13 +49,13 @@ svi:
 	jmp provera
 predzadnji:
 	decl %edi
-	jmp provera		    	# mada ne mora
+	jmp provera			# mada ne mora
 
 provera:
 	cmpl %esi, %edi
 	je ispis
 menjaj:
-	movl %esi, %eax		  	# čuva adresu trenutnog karaktera
+	movl %esi, %eax			# čuva adresu trenutnog karaktera
 	movb (%esi), %cl		# čuva vrednost prvog karaktera
 	incl %esi			# pređi na sledeći element
 	movl %esi, %ebx			# sačuvaj adresu trenutnog karaktera
