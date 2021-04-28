@@ -24,13 +24,11 @@ main:
 	int $0x80
 	movl %eax, unosl		# smeštaš dužinu
 
-###################
 poziv:
 	pushl $unos
 	call swat
 	addl $4, %esp
 	
-##################
 ispis:
 	movl $4, %eax
 	movl $1, %ebx
