@@ -12,23 +12,23 @@ slova:
 	pushl %edi
 	pushl %ebx
 	
-	movl  8(%ebp), %esi		    # prvi string
-	movl 12(%ebp), %edi		    # drugi string
-	movl 16(%ebp), %edx		    # razlika
+	movl  8(%ebp), %esi			# prvi string
+	movl 12(%ebp), %edi			# drugi string
+	movl 16(%ebp), %edx			# razlika
 	movl $0, %eax			        # povratna vrednost pp
 	movl $0, %ebx			        # broj malih slova u prvom
 	movl $0, %ecx			        # broj malih slova u drugom
 prvi:
-	cmpb $10, (%esi)		      # mora b jer bajtovi
+	cmpb $10, (%esi)			# mora b jer bajtovi
 	je drugi
 prvi_mala:
 	cmpb $'z' , (%esi)
 	jg sledeci1
 	cmpb $'a' , (%esi)
 	jl sledeci1
-	incl %ebx			            # odmax povećaš brojač za prvi
+	incl %ebx				# odmax povećaš brojač za prvi
 sledeci1:
-	incl %esi			            # sledeći znak u prvom stringu
+	incl %esi				# sledeći znak u prvom stringu
 	jmp prvi
 
 drugi:
@@ -39,9 +39,9 @@ drugi_mala:
 	jg sledeci2
 	cmpb $'a' , (%edi)
 	jl sledeci2
-	incl %ecx			            # odmah povećaš brojač za drugi
+	incl %ecx				# odmah povećaš brojač za drugi
 sledeci2:
-	incl %edi			            # sledeći element u drugom stringu
+	incl %edi				# sledeći element u drugom stringu
 	jmp drugi
 
 poredi:
@@ -61,10 +61,10 @@ jednako:
 	jmp razlika
 razlika:
 	cmpl %ebx, %ecx
-	jl zameni			            # ako je ecx manje ebx, zameni ih da bude obrnuto
+	jl zameni				# ako je ecx manje ebx, zameni ih da bude obrnuto
 oduzmi:
 	movl %ecx, %eax
-	subl %ebx, %eax			      # odmah smeštaš u eax rezultat
+	subl %ebx, %eax				# odmah smeštaš u eax rezultat
 	jmp kraj
 zameni:
 	xchgl %ebx, %ecx
