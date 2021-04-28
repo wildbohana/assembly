@@ -8,9 +8,9 @@ swat:
 	pushl %ebp
 	movl %esp, %ebp
 	
-	pushl %esi		# pokazuje na niz
-	pushl %edi		# u sebi sadrži broj elemenata niza
-	pushl %ebx		# parnost, paran neparan
+	pushl %esi			# pokazuje na niz
+	pushl %edi			# u sebi sadrži broj elemenata niza
+	pushl %ebx			# parnost, paran neparan
 
 	movl 8(%ebp), %esi
 	movl $0, %edi
