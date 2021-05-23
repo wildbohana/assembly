@@ -35,5 +35,3 @@ maska_cela_kraj:
 	movl $1, %eax
 	movl $0, %ebx
 	int $0x80
-
-# ne kontam ovo sa ostatkom i sa xchgl
