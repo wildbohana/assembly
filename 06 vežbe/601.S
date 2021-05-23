@@ -3,6 +3,8 @@
 # ukoliko je neki od parametra neispravan, vratiti 0 kao rezultat
 # neispravni parametri: v koji nije 0 ili 1, n koji je >31 (jer 32bit podatak ima 32 bita)
 
+# koristi se not a ne neg (neg = not + incl)
+
 .section .data
 	n: .long 10
 	v: .byte 1
