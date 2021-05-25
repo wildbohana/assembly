@@ -1,26 +1,26 @@
 .section .data 
-  ispis1: .ascii "Unesite 8 elemenata niza:\n"
-  ispis1_len = .-ispis1
-  ispis2: .ascii "NEPARAN broj jedinica.\n"
-  ispis2_len = .-ispis2
-  ispis3: .ascii "PARAN broj jedinica.\n"
-  ispis3_len = .-ispis3
-  ispis4: .ascii "Doslo je do greske."
-  ispis4_len = .-ispis4
-  maska: 	   .byte 0b10000001
-	   .byte 0b01000010
-	   .byte 0b00100100
-	   .byte 0b00011000	
-	   .byte 0b00100100
-	   .byte 0b01000010
-	   .byte 0b10000001   
-  niz: .fill 8, 1, 0
-  brojac: .long 0
-  string: .fill 100, 1, 0
-  maska_provera: .byte 0b01000000
-  ispis5: .ascii "Povratna vrednost programa: \0"
-  ispis5_len = .-ispis5
-  ispis_brojac: .fill 10, 1, 0
+	ispis1: .ascii "Unesite 8 elemenata niza:\n"
+	ispis1_len = .-ispis1
+	ispis2: .ascii "NEPARAN broj jedinica.\n"
+	ispis2_len = .-ispis2
+	ispis3: .ascii "PARAN broj jedinica.\n"
+	ispis3_len = .-ispis3
+	ispis4: .ascii "Doslo je do greske."
+	ispis4_len = .-ispis4
+	maska: 	.byte 0b10000001
+		.byte 0b01000010
+		.byte 0b00100100
+		.byte 0b00011000	
+		.byte 0b00100100
+		.byte 0b01000010
+		.byte 0b10000001   
+	niz: .fill 8, 1, 0
+	brojac: .long 0
+	string: .fill 100, 1, 0
+	maska_provera: .byte 0b01000000
+	ispis5: .ascii "Povratna vrednost programa: \0"
+	ispis5_len = .-ispis5
+	ispis_brojac: .fill 10, 1, 0
 .section .text
 .globl main
 
