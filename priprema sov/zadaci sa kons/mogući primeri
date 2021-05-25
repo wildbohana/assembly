@@ -1,0 +1,13 @@
+1. 	Prolazak kroz string koji je korisnik uneo sa tastature i npr.
+	prebrojavanje određene vrste karaktera (specijalni karakteri,
+	mala slova, itd.) i ispisivanje određenog rezultata na ekran.
+
+2.	Prolazak kroz string koji je korisnik uneo sa tastature i
+	pronalaženje numeričkih karaktera koje treba (npr) sumirati
+	(ili pomnoziti ili podeliti itd.)
+	Ovde je potrebno da nakon što naiđemo na numerički karakter
+	da ga konvertujemo iz znakovnog u interni.
+
+3.	Korisnik unosi string u određenom formatu. Na primer
+	"25+53\n". Od vas se traži da izvršite aritmetičku operaciju
+	nad brojevima koji je korisnik uneo.
